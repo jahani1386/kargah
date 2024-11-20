@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <h2>لطفا اطلاعات خود را وارد کنید</h2>
+  <form id="registrationForm" onsubmit="return validateForm()">
+    <label for="fullName">نام کامل:</label>
+    <input type="text" id="fullName" name="fullName">
+
+    <label for="email">ایمیل:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="password">رمز عبور:</label>
+    <input type="password" id="password" name="password">
+
+    <button type="submit">ثبت نام</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      let fullName = document.getElementById('fullName').value;
+      let email = document.getElementById('email').value;
+      let password = document.getElementById('password').value;
+
+      if (fullName === '' || email === '' || password === '') {
+        alert('لطفا تمام فیلدها را پر کنید');
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</body>
+</html>
+    
+</body>
+</html>
